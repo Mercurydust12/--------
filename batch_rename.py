@@ -86,7 +86,7 @@ def main():
     parser.add_argument('--dir', '-d', type=Path, default=Path('.'), help='目标目录（默认当前目录）')
     parser.add_argument('--pattern', '-p', type=str, default='{prefix}{counter}',
                         help=("重命名模式，支持占位符：{counter},{orig},{ext},{date},{mtime}。"
-                              "例如 'IMG_{counter:04d}' 或 '{date:%Y%m%d}_{orig}'。"))
+                              "例如 'IMG_{counter:04d}' 或 '{date:%%Y%%m%%d}_{orig}'。"))
     parser.add_argument('--prefix', type=str, default='', help='若未在 pattern 中指定 prefix，可用此项')
     parser.add_argument('--suffix', type=str, default='', help='若未在 pattern 中指定 suffix，可用此项')
     parser.add_argument('--start', type=int, default=1, help='序号起始值（默认1）')
